@@ -3,7 +3,7 @@
 adt_inst=~/adt_installation
 pat_file=~/.GITHUB_PAT
 
-if [ ! -f $github_pat ]; then
+if [ ! -f $pat_file ]; then
     echo "File $pat_file does not exist."
     exit 0
 fi
@@ -14,6 +14,6 @@ fi
 cd $adt_inst
 github_pat=`cat $pat_file`
 str1="https://"
-str2="@github.com/rijaf-iri/kmdawsParser.git"
+str2="@github.com/rijaf-iri/adt-installation.git"
 url_inst="$str1$github_pat$str2"
 git clone $url_inst
